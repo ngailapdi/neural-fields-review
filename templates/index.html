@@ -14,91 +14,14 @@
   }
 </style>
 
-<image src="{{config.logo.main}}" style="padding-top: 8vh; width: 30%; min-width: 240px; display: block;
+<image src="{{config.logo.main}}" style="padding-top: 8vh; width: 70%; min-width: 240px; display: block;
   margin-left: auto;
-  margin-right: auto;" alt="A living database of neural field papers in visual computing and beyond"></image>
+  margin-right: auto;" alt="A community of researchers at the intersection of developmental science and machine learning"></image>
+<!-- Acknowledgements Section -->
+<p class="infopage-text" style="padding-top: 8vh; width: 70%; min-width: 240px; display: block;
+  margin-left: auto; margin-right: auto;">Recent advances in artificial intelligence, enabled by large-scale datasets and simulation environments, have resulted in breakthrough improvements in areas like object and speech recognition, 3D navigation, and machine translation. In spite of these advances, modern artificial learning systems still pale in comparison to the competencies of young human learners. The differences between human learning and the paradigms that currently guide machine learning are striking. For example, children actively identify both the concepts to be learned and the data items used for learning, they infer the labels for learning from ambiguous perceptual data, and they learn from continuous streams of percepts without storing and curating large datasets. Artificial intelligence researchers are increasingly looking to developmental science for ideas and inspiration to improve machine learning, while developmental scientists are adopting tools from data science and machine learning to analyze large datasets and gain insights into developmental processes. This Dagstuhl Seminar will provide an opportunity to catalyze new connections between the developmental and machine learning research communities by bringing together researchers in linguistics, psychology, cognitive science and neuroscience with investigators working in computer vision, machine learning and robotics (full text).
+</p>
 {% endblock %}
 
-{% block content %}
 
-<div class="row" style="padding-top: 20px;">
-  <div class="col-2"></div>
-  <div class="input-group col-8">
-    <input type="text" id="vagueSearchInput" class="form-control vagueSearchTypeahead change" placeholder="Search all neural field papers."
-      onchange="vagueSearch()" style="font-family: 'Ubuntu', sans-serif;">
-    <button type="button" class="btn bg-transparent vagueSearchTypeahead_clear"
-      style="margin-left: -40px; z-index: 100;">
-      &times;
-    </button>
-  </div>
-  <div class="col-1">
-    <button class="btn btn-outline-secondary" style="border-radius: 20px; background-color: #4A372B; color: white;" data-tippy-content="Search"
-      onclick="vagueSearch()">
-      <div class="fas">&#xf002;</div>
-    </button>
-  </div>
-</div>
 
-<div class="row" style="padding-top: 20px; padding-bottom: 30px;">
-  <div class="col-lg-5 col-sm-4 mt-1 d-flex justify-content-center justify-content-md-end">
-    <button type="button" class="btn btn-success" style="font-family: 'Ubuntu', sans-serif;" onclick="window.open('papers.html','_self').focus();">
-      Advanced Search
-    </button>
-  </div>
-  <div class="col-lg-2 col-sm-4 mt-1 d-flex justify-content-center justify-content-md-center">
-    <button type="button" class="btn btn-success" style="font-family: 'Ubuntu', sans-serif;" onclick="window.open('papers_vague.html?feelingLucky=true','_self').focus();">
-      I'm Fielding Lucky
-    </button>
-  </div>
-  <div class="col-lg-5 col-sm-4 mt-1 d-flex justify-content-center justify-content-md-start">
-    <button type="button" class="btn btn-success" style="font-family: 'Ubuntu', sans-serif;" onclick="window.open('add_paper.html','_self').focus();">
-      Add/Edit Paper
-    </button>
-  </div>
-</div>
-
-<!-- Sub-title -->
-<p style="text-align: center; font-size:normal;"><a href="https://neuralfields.cs.brown.edu/eg22.html">Eurographics 2022 STAR</a> | <a href="https://neuralfields.cs.brown.edu/cvpr22.html">CVPR 2022 Tutorial</a></p>
-<!-- <p style="text-align: center; font-size:normal; font-style: italic; color: #adadad;">A review and database of <a href="faq.html">neural fields</a> in visual computing and beyond.</p> -->
-
-<div class="container" style="padding-bottom: 60px;">
-  <div class="row">
-    <div class="col-5"></div>
-    <div class="col-2">
-      <!-- <a href="static/pdf/2021_NeuralFieldsReview.pdf" target="_blank"> -->
-      <a href="https://arxiv.org/pdf/2111.11426.pdf" target="_blank">
-        <image src="static/images/our_paper_first_page.png" style="width: 100%; min-width: 100px; border: 1px solid black;">
-      </a>
-      <!-- <a class="fas" style="cursor: pointer; color: #4A372B;;" href="static/pdf/2021_NeuralFieldsReview.pdf" target="_blank">&#xf1c1;&nbsp;<span style="font-family: 'Ubuntu', sans-serif; color: #4A372B;">PDF</span></a> -->
-      <center>
-      <a class="fas" style="cursor: pointer; color: #4A372B;;" href="https://arxiv.org/abs/2111.11426" target="_blank">&#xf1c1; <span style="font-family: 'Ubuntu', sans-serif; color: #4A372B;">arXiv</span> &nbsp;</a>
-      <a class="fas" style="cursor: pointer; color: #4A372B;;" href="https://arxiv.org/pdf/2111.11426.pdf" target="_blank">&#xf1c1; <span style="font-family: 'Ubuntu', sans-serif; color: #4A372B;">PDF</span> &nbsp;</a>
-      <a class="fas" style="cursor: pointer; color: #4A372B;" onclick="copyBibtex()">&#xf0c5;&nbsp;<span style="font-family: 'Ubuntu', sans-serif; color: #4A372B;">BibTeX</span></a>
-      </center>
-    </div>
-    <div class="col-5"></div>
-  </div>
-</div>
-
-<script src="static/js/modules/typeaheadSetup.js"></script>
-<script src="static/js/views/view_utils.js"></script>
-<script src="static/js/views/index.js"></script>
-<script>
-  start();
-  setTimeout(() => { document.getElementById("vagueSearchInput").focus();}, 400)
-  const copyBibtex = () => {
-    const bibtex = `@article{10.1111:cgf.14505,
-    journal = {Computer Graphics Forum},
-    title = {Neural Fields in Visual Computing and Beyond},
-    author = {Xie, Yiheng and Takikawa, Towaki and Saito, Shunsuke and Litany, Or and Yan, Shiqin and Khan, Numair and Tombari, Federico and Tompkin, James and Sitzmann, Vincent and Sridhar, Srinath},
-    year = {2022},
-    publisher = {The Eurographics Association and John Wiley & Sons Ltd.},
-    ISSN = {1467-8659},
-    DOI = {10.1111/cgf.14505}
-}`
-    navigator.clipboard.writeText(bibtex)
-    .then(() => alert('Successfully copied Bibtex'));
-    //alert('Successfully copied Bibtex');
-  }
-</script>
-{% endblock %}

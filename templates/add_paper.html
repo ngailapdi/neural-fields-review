@@ -24,6 +24,21 @@
 </style>
 {% endblock %}
 
+{% block tabs %}
+<ul class="nav nav-pills justify-content-center">
+  <li class="nav-item active">
+    <a class="nav-link text-muted" href="papers.html">Search/Browse</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-muted active" data-toggle="tab" role="tab" aria-controls="nav-home"
+      aria-selected="true">Add Papers
+    </a>
+
+  </li>
+</ul>
+
+{% endblock %}
+
 {% block content %}
 
 <div class="main-text" style="width: 70%; display: block; margin-left: auto; margin-right: auto;">
