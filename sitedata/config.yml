@@ -5,7 +5,7 @@ date: Sept 2021
 favicon: favicon.ico
 logo:
     main: static/images/main_logo.png
-    long: static/images/long_logo.png
+    long: static/images/main_logo.png
 page_title:
     prefix: "Neural Fields"
     separator: ": "
