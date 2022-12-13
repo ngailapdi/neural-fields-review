@@ -16,21 +16,19 @@ site_data = {}
 by_uid = {}
 
 field_name_mapping = {
+    "UID": "UID",
     "Title": "Title",
-    "Nickname": "Nickname (e.g. DeepSDF)",
-    "Venue": "Venue no Year",
-    "Date": "Date released",
-    "Citation": "Bibtex (e.g. @inproceedings...)",
-    "PDF": "PDF link (arXiv perferred)",
+    "Venue": "Venue",
+    "Citation": "BibTex",
+    "PDF": "PDF link (arXiv preferred) ",
     "Project Webpage": "Project webpage link",
     "Code Release": "Code Release (Github link, or enter \"Coming soon\")",
     "Data Release": "Data Release (link)",
     "Talk/Video": "Talk/Video (link, Youtube preferred)",
     "Keywords": "Keywords",
     "Abstract": "Abstract",
-    "UID": "UID",
-    "Authors": "Authors (format: First Last, First Middle Last, ...)",
-    "Year": 'Year (corresponding to venue e.g. released in 2021, accepted to CVPR 2022, then put "2022" for this entry, and "2021" for the above)'
+    "Authors": "Authors (format: First Last)",
+    "Date": "Date Published (MM/DD/YYYY)"
 }
 
 def main(site_data_path):
@@ -50,8 +48,9 @@ def main(site_data_path):
 
     for typ in ["papers"]:
         by_uid[typ] = {}
-        for p in site_data[typ]:
-            by_uid[typ][p["UID"]] = p
+        for id, p in enumerate(site_data[typ]):
+            by_uid[typ][str(id+1)] = p
+
 
     print("Data Successfully Loaded")
     return extra_files
@@ -106,7 +105,7 @@ def embed_url(video_url):
     return re.sub(regex, r"https://www.youtube.com/embed/\1", video_url)
 
 
-def format_paper(v):
+def format_paper(id, v):
     list_keys = ["Authors", "Keywords"]
     list_fields = {}
     for key in list_keys:
@@ -124,14 +123,12 @@ def format_paper(v):
             talk_URL = URL
 
     data = {
-        "UID": v[field_name_mapping["UID"]],
+        "UID": id,
         "title": v[field_name_mapping["Title"]],
-        "nickname": v[field_name_mapping["Nickname"]],
         "authors": list_fields["Authors"],
         #"Tasks": list_fields["Task"],
         #"Techniques": list_fields["Techniques"],
         "keywords": list_fields["Keywords"],
-        "date": v[field_name_mapping["Date"]],
         "abstract": v[field_name_mapping["Abstract"]],
         "pdf_url": v.get(field_name_mapping["PDF"], ""),
         "code_link": v.get(field_name_mapping["Code Release"], ""),
@@ -140,8 +137,11 @@ def format_paper(v):
         "project_link": v[field_name_mapping["Project Webpage"]],
         "citation": v[field_name_mapping["Citation"]],
         "venue": v.get(field_name_mapping["Venue"], ""),
-        "year": v[field_name_mapping["Year"]],
+        "date": v.get(field_name_mapping["Date"], ""),
+
     }
+    print('FORMAT')
+    print(data)
     return data
 
 
@@ -196,13 +196,18 @@ def paper(paper):
     uid = paper
     v = by_uid["papers"][uid]
     data = _data()
-    data["paper"] = format_paper(v)
+    data["paper"] = format_paper(uid, v)
     return render_template("paper_detail.html", **data)
 
 @app.route("/faq.html")
 def info():
     data = _data()
     return render_template("faq.html", **data)
+
+@app.route("/meetings.html")
+def meeting():
+    data = _data()
+    return render_template("meetings.html", **data)
 
 @app.route("/add_paper.html")
 def add_paper():
@@ -239,8 +244,8 @@ def thumbnail(thumbnail):
 @app.route("/papers.json")
 def paper_json():
     json = []
-    for v in site_data["papers"]:
-        json.append(format_paper(v))
+    for uid, v in enumerate(site_data["papers"]):
+        json.append(format_paper(str(uid+1), v))
     return jsonify(json)
 
 @app.route("/serve_<path>.json")

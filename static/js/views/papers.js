@@ -48,7 +48,7 @@ const start = () => {
       d3.select("#displaying-number-of-papers-message")
         .html(`<span>Displaying ${allPapers.length} papers</span>`);
       calcAllKeys(allPapers, allKeys);
-      initTypeAhead([...allKeys.titles, ...allKeys.nicknames],".titleAndNicknameTypeahead","titleAndNickname",setTitleAndNicknameFilter)
+      initTypeAhead([...allKeys.titles],".titleAndNicknameTypeahead","titleAndNickname",setTitleAndNicknameFilter)
       addNewFilter("author", "");
       addNewFilter("keyword", "");
       addNewFilter("venue", "");
@@ -378,7 +378,7 @@ const card_html = (paper) =>
                         ${renderMode === MODE.mini ? "" : "Date: " + paper.date}
                 </p>
                 <p class="card-venue text-muted">
-                        ${renderMode === MODE.mini ? "" : "Venue: " + paper.venue + " " + paper.year}
+                        ${renderMode === MODE.mini ? "" : "Venue: " + paper.venue}
                 </p>
                 ${renderMode === MODE.mini ? "" : card_keywords(paper.keywords)}
                 

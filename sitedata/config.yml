@@ -4,13 +4,13 @@ tagline: Developmental AI
 date: Sept 2021
 favicon: favicon.ico
 logo:
-    main: static/images/main_logo.png
-    long: static/images/main_logo.png
+    main: static/images/big_logo.png
+    long: static/images/small_logo.png
 page_title:
     prefix: "Neural Fields"
     separator: ": "
 background_image: static/images/main.jpg
 organization: Brown Visual Computing Group
 
-add_paper_form_link: https://forms.gle/JKMicvyaaekoes3w5
+add_paper_form_link: https://forms.gle/KvVRq2xVKLDUGUza6
 update_paper_form_link: https://forms.gle/LwetzG6umEyZaRAS6

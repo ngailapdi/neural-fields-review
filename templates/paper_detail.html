@@ -56,10 +56,10 @@
             {% endfor %}
         </p>
 
-        {% if paper.venue != "" and paper.year != "" %}
+        {% if paper.venue != "" %}
         <p class="text-center" style="margin-bottom: 0px;">
             <span>Venue: </span>
-            <a href="papers.html?venue={{paper.venue}}" target="_blank" class="text-secondary text-decoration-none">{{paper.venue}} {{paper.year}}</a>
+            <a href="papers.html?venue={{paper.venue}}" target="_blank" class="text-secondary text-decoration-none">{{paper.venue}}</a>
         </p>
         {% endif %}
 
@@ -134,7 +134,7 @@
 {% endif %}
 
 <!-- Citation Graph -->
-{{ components.sectionTitleCitationGraph("Citation Graph") }}
+<!-- {{ components.sectionTitleCitationGraph("Citation Graph") }}
 
 <div id="citationGraph" style="width: 100%;
   height: 600px;
@@ -148,6 +148,6 @@
     tippy(".filterByKeywordLink");
     const paperID = document.getElementById("invisible-paper-id").innerHTML;
     drawCitationGraphAndGenerateCitationCode(paperID);
-</script>
+</script> -->
 
 {% endblock %}
