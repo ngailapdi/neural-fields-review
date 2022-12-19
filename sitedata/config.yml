@@ -7,7 +7,7 @@ logo:
     main: static/images/big_logo.png
     long: static/images/small_logo.png
 page_title:
-    prefix: "Neural Fields"
+    prefix: "Developmental AI"
     separator: ": "
 background_image: static/images/main.jpg
 organization: Brown Visual Computing Group
