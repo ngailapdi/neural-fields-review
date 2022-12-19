@@ -36,7 +36,7 @@
             affliation: "Wadern, Germany",
             headshotURL: "static/images/IMG_2478.jpg",
             websiteURL: "https://sites.google.com/view/developmental-machine-learning/home",
-            description: "Recent advances in artificial intelligence, enabled by large-scale datasets and simulation environments, have resulted in breakthrough improvements in areas like object and speech recognition, 3D navigation, and machine translation. In spite of these advances, modern artificial learning systems still pale in comparison to the competencies of young human learners. The differences between human learning and the paradigms that currently guide machine learning are striking. For example, children actively identify both the concepts to be learned and the data items used for learning, they infer the labels for learning from ambiguous perceptual data, and they learn from continuous streams of percepts without storing and curating large datasets. Artificial intelligence researchers are increasingly looking to developmental science for ideas and inspiration to improve machine learning, while developmental scientists are adopting tools from data science and machine learning to analyze large datasets and gain insights into developmental processes. This Dagstuhl Seminar will provide an opportunity to catalyze new connections between the developmental and machine learning research communities by bringing together researchers in linguistics, psychology, cognitive science and neuroscience with investigators working in computer vision, machine learning and robotics (full text). "
+            description: "The Developmental AI online research community is one of the outcomes of the 5-day Dagstuhl seminar held in October 2022. The primary objective of this meeting was to bring together junior and senior researchers in developmental psychology, linguistics and neuroscience with researchers in computer vision, machine learning and artificial intelligence, and define a set of interdisciplinary collaborative future research directions. The seminar was a combination of talks, discussion sessions and working groups. Research questions that were discussed included: </br> <ul> <li>What is the role of computational models of learning (e.g., machien perception, reinforcement learning) in advancing developmental science? </li> <li>What are the connections between current computational research in self-supervised, weakly-supervised, and continual machine learning, and analogous developmental learning processes in humans and animals?</li> <li>What is the role of multimodal learning (learning from diverse signal types such as visual, audio, touch, force, etc.) in development? What are the challenges and opportunities in multimodal machine learning?</li> </ul> Videos of the talks from this seminar are available at the following YouTube playlist. "
         },
     ];
     for (contributor of contributors) {
@@ -57,10 +57,10 @@
           <a  class="black-hyper-link" ${websiteURL ? "href=" + websiteURL : ""} target="_blank">
             <div class="row">
                 <div class="column left">
-                    <div class="ml-4">${description}</div>
+                    <div class="ml-4"  style="margin: 30px">${description}</div>
                 </div>
                 <div class="column right">
-                    <div class="mr-4"><img src="${headshotURL}" style="width: 100%"; class="contributor-headshot"></div>
+                    <div class="mr-4"><img src="${headshotURL}"  class="meeting-photo"></div>
                 </div>
             </div>
           </a>

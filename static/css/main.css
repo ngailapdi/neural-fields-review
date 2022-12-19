@@ -450,12 +450,24 @@ body .carousel-control-prev {
 	margin-bottom: 20px;
 }
 
-.meeting-card {
-	height: 500px;
-}
 
 .contributor-card {
 	height: 300px;
+}
+
+=======
+.meeting-card {
+	height: 600px;
+}
+
+.meeting-photo {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(+50%);
+    #-ms-transform: translateY(-50%);
+    #transform: translateY(-50%);
 }
 
 .contributor-headshot {
