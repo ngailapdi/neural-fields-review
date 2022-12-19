@@ -454,6 +454,21 @@ body .carousel-control-prev {
 	height: 500px;
 }
 
+.meeting-card {
+	height: 600px;
+}
+
+.meeting-photo {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(+50%);
+    #-ms-transform: translateY(-50%);
+    #transform: translateY(-50%);
+}
+
+
 .contributor-headshot {
 	width: 80%;
 	display: block;
