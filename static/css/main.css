@@ -450,8 +450,12 @@ body .carousel-control-prev {
 	margin-bottom: 20px;
 }
 
-.contributor-card {
+.meeting-card {
 	height: 500px;
+}
+
+.contributor-card {
+	height: 300px;
 }
 
 .contributor-headshot {
