@@ -9,132 +9,34 @@
     .red-hyper-link {
         color: #ED1C24 !important;
     }
+    .black-hyper-link {
+        color: black !important;
+    }
 </style>
 {% endblock %}
 
 {% block content %}
 
-<div class="main-text" style="width: 70%; display: block; margin-left: auto; margin-right: auto; padding-bottom: 5vh;">
+<div class="main-text" style="width: 100%; display: block; margin-left: auto; margin-right: auto; padding-bottom: 5vh;">
 <!-- Slack channel -->
-<p class="infopage-title-1">Join our Slack channel</p>
-<p class="infopage-text"> Joint the community of Neural Field researchers on our
-    <a class="red-hyper-link" href="https://join.slack.com/t/neuralfields/shared_invite/zt-1c8ckwx3a-lNQUl0jIUQNqbnLkbq_XVA">Slack channel</a>, 
-    where you can bounce off ideas, join reading groups, and ask questions.
-</p>
 
-
-<!-- Become a contributor -->
-<p class="infopage-title-1">Become a moderator</p>
-<p class="infopage-text"> We hope that this database becomes an asset of our community,
-    so we welcome anyone interested to become a moderator for the database. 
-    You can help by submitting new papers, and review paper submissions.
-    Please let us know via this short 
-    <a class="red-hyper-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeu0vga6L3YavgMbKKRsTCam-i-b8QHV1JdG9HzLUilEBXv2A/viewform">Google Form</a>
-    if you are interested!
-</p>
 
 
 <!-- Contributors -->
-<p class="infopage-title-1" style="padding-top: 5vh;">Contributors</p>
-<div class="row" id="contributor-cards"></div>
+<!-- <p class="infopage-title-1" style="padding-top: 5vh;">Past Meetings</p> -->
+<div class="row" style="padding-top: 5vh;" id="contributor-cards"></div>
 
-
-<!-- Acknowledgements Section -->
-<p class="infopage-title-1">Acknowledgements</p>
-<p class="infopage-text">This website was built on top of <a class="red-hyper-link" href="https://github.com/Mini-Conf/Mini-Conf" target="_blank">MiniConf</a> project for
-    a virtual conference in a box from <a class="red-hyper-link" href="http://twitter.com/hen_str" target="_blank">Hendrik Strobelt</a> and <a class="red-hyper-link" href="http://twitter.com/srush_nlp" target="_blank">Sasha Rush</a>.
-    Citation relation data used for generating citation graphs are derived from
-the <a class="red-hyper-link" href="https://www.semanticscholar.org/product/api" target="_blank">Semantic Scholar API</a>.
-This work was supported by an NSF grant (CNS-2038897) and the Google Research Scholar Program.
-</p>
-
-
-<!-- Affiliations -->
-<p class="infopage-title-1">Project Led By</p>
-<div class="row" style="padding-bottom: 10vh; padding-top: 5vh;">
-    <div class="col-6">
-        <a href="https://visual.cs.brown.edu/" target="_blank">
-            <img src="static/images/BVC_logo.png" alt="Brown Visual Computing"
-                style="width: 30%; display: block; margin-left: auto; margin-right: auto;">
-        </a>
-    </div>
-    <div class="col-6">
-        <a href="http://www.scenerepresentations.org/" target="_blank">
-            <img src="static/images/SRG_logo.png" alt="MIT Scene Representation Group"
-                style="width: 100%; display: block; margin-left: auto; margin-right: auto; padding-top: 10%;">
-        </a>
-    </div>
-</div>
 
 </div>
 
 <script>
     const contributors = [
         {
-            name: "Yiheng Xie",
-            affliation: "Brown University, Unity Technologies",
-            headshotURL: "static/images/contributors/Yiheng_Xie.jpg",
-            websiteURL: "https://yxie20.github.io/"
-        },
-        {
-            name: "Towaki Takikawa",
-            affliation: "University of Toronto, NVIDIA",
-            headshotURL: "static/images/contributors/Towaki_Takikawa.png",
-            websiteURL: "https://tovacinni.github.io/"
-        },
-        {
-            name: "Shunsuke Saito",
-            affliation: "Reality Labs Research",
-            headshotURL: "static/images/contributors/Shunsuke_Saito.png",
-            websiteURL: "http://www-scf.usc.edu/~saitos/"
-        },
-        {
-            name: "Or Litany",
-            affliation: "NVIDIA",
-            headshotURL: "static/images/contributors/Or_Litany.jpg",
-            websiteURL: "https://orlitany.github.io/"
-        },
-        {
-            name: "Shiqin Yan",
-            affliation: "Brown University",
-            headshotURL: "static/images/contributors/Shiqin_Yan.jpg",
-            websiteURL: "https://player-eric.com/about"
-        },
-        {
-            name: "Numair Khan",
-            affliation: "Brown University",
-            headshotURL: "static/images/contributors/Numair_Khan.jpg",
-            websiteURL: "http://cs.brown.edu/~nkhan6/"
-        },
-        {
-            name: "Federico Tombari",
-            affliation: "Google, TU Munich",
-            headshotURL: "static/images/contributors/Federico_Tombari.jpg",
-            websiteURL: "https://federicotombari.github.io"
-        },
-        {
-            name: "Sunny Li",
-            affliation: "Brown University",
-            headshotURL: "static/images/contributors/Sunny_Li.jpg",
-            websiteURL: ""
-        },
-        {
-            name: "James Tompkin",
-            affliation: "Brown University",
-            headshotURL: "static/images/contributors/James_Tompkin.jpg",
-            websiteURL: "https://jamestompkin.com/"
-        },
-        {
-            name: "Vincent Sitzmann",
-            affliation: "MIT",
-            headshotURL: "static/images/contributors/Vincent_Sitzmann.jpeg",
-            websiteURL: "http://vsitzmann.github.io/"
-        },
-        {
-            name: "Srinath Sridhar",
-            affliation: "Brown University",
-            headshotURL: "static/images/contributors/Srinath_Sridhar.jpeg",
-            websiteURL: "https://cs.brown.edu/people/ssrinath"
+            name: "Dagstuhl Seminar",
+            affliation: "Wadern, Germany",
+            headshotURL: "static/images/IMG_2478.jpg",
+            websiteURL: "https://yxie20.github.io/",
+            description: "Recent advances in artificial intelligence, enabled by large-scale datasets and simulation environments, have resulted in breakthrough improvements in areas like object and speech recognition, 3D navigation, and machine translation. In spite of these advances, modern artificial learning systems still pale in comparison to the competencies of young human learners. The differences between human learning and the paradigms that currently guide machine learning are striking. For example, children actively identify both the concepts to be learned and the data items used for learning, they infer the labels for learning from ambiguous perceptual data, and they learn from continuous streams of percepts without storing and curating large datasets. Artificial intelligence researchers are increasingly looking to developmental science for ideas and inspiration to improve machine learning, while developmental scientists are adopting tools from data science and machine learning to analyze large datasets and gain insights into developmental processes. This Dagstuhl Seminar will provide an opportunity to catalyze new connections between the developmental and machine learning research communities by bringing together researchers in linguistics, psychology, cognitive science and neuroscience with investigators working in computer vision, machine learning and robotics (full text). "
         },
     ];
     for (contributor of contributors) {
@@ -142,17 +44,25 @@ This work was supported by an NSF grant (CNS-2038897) and the Google Research Sc
         const affliation = contributor.affliation;
         const headshotURL = contributor.headshotURL;
         const websiteURL = contributor.websiteURL;
+        const description = contributor.description;
         d3.select("#contributor-cards")
             .append("div")
-            .attr("class", "col-md-4 col-sm-4")
+            .attr("class", "col-xs-11 col-md-11")
             .html(`
-        <div class="pp-card contributor-card">
+        <div class="m-card contributor-card">
           <div class="pp-card-header" style="text-align: center;">
             <a class="red-hyper-link" ${websiteURL ? "href=" + websiteURL : ""} target="_blank"><h5 class="card-title">${name}</h5></a>
             <h6 class="card-subtitle text-muted m-1">${affliation}</h6>
           </div>
-          <a  ${websiteURL ? "href=" + websiteURL : ""} target="_blank">
-            <img src="${headshotURL}" class="contributor-headshot">
+          <a  class="black-hyper-link" ${websiteURL ? "href=" + websiteURL : ""} target="_blank">
+            <div class="row">
+                <div class="column left">
+                    <div class="ml-4">${description}</div>
+                </div>
+                <div class="column right">
+                    <div class="mr-4"><img src="${headshotURL}" style="width: 100%"; class="contributor-headshot"></div>
+                </div>
+            </div>
           </a>
         </div>
         `);
