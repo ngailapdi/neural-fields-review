@@ -21,93 +21,12 @@
 <div class="main-text" style="width: 70%; display: block; margin-left: auto; margin-right: auto; padding-bottom: 5vh;">
 <p class="infopage-title-1" style="padding-top: 5vh;">What is this?</p>
 <p class="infopage-text">
-    This is a companion website to the review paper:
-    <!-- <i><a class="red-hyper-link" href="static/pdf/2021_NeuralFieldsReview.pdf">Neural Fields in Visual Computing and Beyond</a></i>. -->
-    <i><a class="red-hyper-link" href="https://arxiv.org/pdf/2111.11426.pdf">Neural Fields in Visual Computing and Beyond</a></i>.
-
-    <p class="infopage-text">
-        This website aims to provide a comprehensive and interactive database of <i><b>neural fields</b></i>, often referred to as coordinate-based neural networks, neural implicits, or neural implicit representations.
-    For more details, please see our review paper.
+This website serves to help connect developmental science and computer science researchers. To facilitate this, one of our goals is to maintain a library of works at the intersection of the fields. Please look at the Papers section of the website.
 </p>
-<p class="infopage-text">If you find our review and this website useful, please cite our work:</p>
-<div id="paper-bibtex" class="pp-card m-1">
-    <div class="card-body">
-        <div class="bibtex-text">
-            <p style="white-space: pre-line; position: relative; font-size: larger;">@article{10.1111:cgf.14505,
-                &#160&#160&#160&#160 journal = {Computer Graphics Forum},
-                &#160&#160&#160&#160 title = {Neural Fields in Visual Computing and Beyond},
-                &#160&#160&#160&#160 author = {Xie, Yiheng and Takikawa, Towaki and Saito, Shunsuke and Litany, Or and Yan, Shiqin and Khan, Numair and Tombari, Federico and Tompkin, James and Sitzmann, Vincent and Sridhar, Srinath},
-                &#160&#160&#160&#160 year = {2022},
-                &#160&#160&#160&#160 publisher = {The Eurographics Association and John Wiley & Sons Ltd.},
-                &#160&#160&#160&#160 ISSN = {1467-8659},
-                &#160&#160&#160&#160 DOI = {10.1111/cgf.14505}
-            }
-            </p>
-        </div>
-    </div>
-</div>
-<p class="infopage-title-1">Features</p>
-<!-- <p class="infopage-title-2">Filtering</p> -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-9">
-            <img src="static/images/browse.gif" style="min-height: 150px;" class="homepage-image">
-        </div>
-        <div class="col-md-3 align-self-center">
-            <p class="infopage-text">Users can filter out desired papers by applying one or multiple filters on papers' titles,
-                authors, keywords, or publication dates.</p>
-        </div>
-    </div>
-</div>
-
-
-<!-- <p class="infopage-title-2">Building a timeline</p> -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-9">
-            <img src="static/images/timeline.gif" style="min-height: 150px;" class="homepage-image">
-        </div>
-        <div class="col-md-3 align-self-center">
-            <p class="infopage-text">A scrollable and zoomable timeline can be built given a set of papers. Users can use this
-                feature to check the trajectory of how a certain technique has evolved over time.
-            </p>
-        </div>
-    </div>
-</div>
-
-
-<!-- <p class="infopage-title-2">Citation graph</p> -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-9">
-            <img src="static/images/citation.gif" style="min-height: 150px;" class="homepage-image">
-        </div>
-        <div class="col-md-3 align-self-center">
-            <p class="infopage-text">Citation graph offers an intuitive way to check citation relations given a single paper or a
-                set of papers.
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-9">
-            <img src="static/images/statistics.gif" style="min-height: 150px;" class="homepage-image">
-        </div>
-        <div class="col-md-3 align-self-center">
-            <p class="infopage-text">
-                A bar chart ranking all keywords by their frequencies. Users can click on bars to
-                browse through papers with corresponding keywords.
-            </p>
-        </div>
-    </div>
-</div>
 
 <!-- Keyword Explanations Section -->
 <p class="infopage-title-1">Keyword Explanations</p>
-<p class="infopage-text">Here are the working definitions we propose, for terms that pertain
-    neural fields and visual computing. We encourage suggestions, edits and additions, as these
+<p class="infopage-text">Here are the working definitions we propose to help organize our library of papers. We encourage suggestions, edits and additions, as these
     definitions will surely evolve over time.
 </p>
 <table id="keyword-explanation-table" style="width:100%; margin-bottom: 20px;">
@@ -117,58 +36,17 @@
     </tr>
 </table>
 
-<!-- Disclaimer Section -->
-<p class="infopage-title-1">Disclaimer</p>
-<p class="infopage-title-2">Data accuracy</p>
-<p class="infopage-text">
-    Up until the release date (Oct.29, 2021), all ~250 data entries were imported manually by our contributers.
-    Please be patient with our mistakes and we apologize if we have misrepresented your work by accident.
-    We encourage all authors to verify that the data corresponding to your papers are accurate by using
-    our submission/editing tool. We also encourage all authors to update the venue, once an arXiv pre-print
-    is accepted by a peer-reviewed venue.
-</p>
-<p class="infopage-title-2">Peer-review criteria</p>
-<p class="infopage-text">
-    In this website, we include all published results, which includes both
-    peer-reviewed papers and arXiv pre-prints. We recognize the importance and rigor of peer-review,
-    so we have included the venue in each paper's landing page. When searching, you may filter for
-    peer-reviewed papers only by selecting the corresponding check box.
-</p>
-</div>
 <script>
     const keyword2expanation = {
-        "Speed & Computational Efficiency": "Improving computation efficiency in training and/or inference.",
-        "Sparse Reconstruction": "Reconstruction with limited input observations (a.k.a. Few-Shot Reconstruction)",
-        "Geometry Only": "Works that reconstructs hard-surface geometry wihtout modeling appearance (e.g. point cloud completion)",
-        "Dynamic/Temporal": "Dynamic, time-varing, or deformable scenes",
-        "Human (Body)": "Modelling human body",
-        "Human (Head)": "Modelling human head",
-        "Robotics": "Topics related to robotics",
-        "Graphics": "Works with a particular emphasis on rendering",
-        "2D Image Neural Fields": "2D neural fields related to image-based tasks (image2image translation, classification, in-painting, etc.)",
-        "Camera Parameter Estimation": "Estimating camera parameters (extrinsic and/or intrinsic) from scratch or from coarse initialization",
-        "Material/Lighting Estimation": "Estimating material for Physically-Based Rendering (BRDF), and/or explicit lighting conditions",
-        "Editable": "A neural field representation that allows editing after reconstruction is completed",
-        "Compression": "Uses neural fields to compress signals to reduce memory footprint",
-        "Sampling": "Works with a particular emphasis sampling strategy in the coordinate domain(s)",
-        "Fundamentals": "Seminal work with a strong theoretical focus as opposed to improving a particular application",
-    	"Science & Engineering": "Topics beyond visual computing, relating to broader scientfic disciplines",
-        "Generative Models": "Topics related to generative modelling, including GANs",
-        "Generalization": "Improving neural fields via data-driven methods",
-    	"Global Conditioning": "Neural fields with latent code input, where the latent code describes the entire object",
-    	"Local Conditioning": "Neural fields with latent code input, where the latent code changes with coordinates",
-        "Data-Driven Method": "Using a data-driven (e.g. pre-trained) component, note that vanilla NeRF is not considered data-driven",
-        "Hypernetwork/Meta-learning": "Techniques employing hypernetwork or meta-learning to achieve generalization",
-        "Regularization": "Works that propose novel regularization constraints or loss functions",
-        "Supervision by Gradient (PDE)": "Techniques supervising a neural field via its gradients (e.g. Eikonal equation)",
-        "Hybrid Geometry Parameterization": "Techniques using hybrid implicit/explicit, discrete/continuous parameterization of signals",
-    	"Voxel Grid": "Techniques using discrete voxel grids and octrees",
-        "Object-Centric": "Representations that explicitly model individual objects",
-        "Image-based Rendering": "Rendering techniques that make use of captured images at inference time",
-        "Coarse-to-Fine": "Techniques using coarse-to-fine or level-of-detail strategy",
-        "Positional Encoding": "Works that propose a novel encoding for input coordinates",
-        "Large-Scale Scenes": "Works that handles large-scale (multiple rooms, city-scale, etc.) scenes"
-        // "Coordinate Re-mapping": "Techniques that transforms coordinate inputs between multiple coordiante frames (e.g. warping/flow fields)"
+        "Visual Perception": "Visual understanding of the world.",  
+        "Language": "Language acquisition",                                                                       
+        "Motor Development": "Developing the capacity to move in the world.",                                     
+        "Shape": "Learning the 2D/3D shape of objects and scenes",                                                      
+        "Object Recognition": "Learning how to recognize and categorize objects",                                 
+        "Fast Mapping": "Word acqusition based on minimal information",                                                           
+        "Mutual Exclusivity": "An assumption that helps learning, e.g. only one objecty has one label",                                   
+        "Few-Shot/Low-Shot Learning": "Learning novel concepts from minimal supervision, using only a few labelled samples",             
+        "Speech": "Research pertaining to speech development and understanding",   
     };
     for(entry of Object.entries(keyword2expanation)){
         const keyword = entry[0];
@@ -182,3 +60,5 @@
     }
 </script>
 {% endblock %}
+
+
